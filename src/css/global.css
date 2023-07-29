@@ -1,0 +1,76 @@
+:root{
+    --primary-color: #32b4e4;
+    --primary-color-h: #2da2cd;
+    --title-color: #015c94;
+    --title-color-h: #015385;
+    --text-color-p: #444;
+    --text-color-s: #666;
+}
+/* Config */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    background: #FFFFFF;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* Container */
+.container{
+    box-sizing: border-box;
+    max-width: 1200px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Utilites */
+.img_container4y3 {
+	position: relative;
+	padding-top: 75%;
+	overflow: hidden;
+}
+.img_container4y3_alt {
+	position: relative;
+	padding-top: 75%;
+	overflow: hidden;
+}
+.img_container4y3_alt img,
+.img_container4y3 img,
+.img_container16y9 img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.img_container16y9 {
+	position: relative;
+	padding-top: 56%;
+	overflow: hidden;
+	display: grid;
+}
+.page-image-1y1 .img_container16y9 {
+	position: relative;
+	padding-top: 100%;
+	overflow: hidden;
+}
+.page-image-3y4 .img_container16y9 {
+	position: relative;
+	padding-top: 133%;
+	overflow: hidden;
+}
