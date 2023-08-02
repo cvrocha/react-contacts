@@ -1,5 +1,7 @@
-import { toBeInTheDOM } from '@testing-library/jest-dom/dist/matchers';
 import React from 'react';
+import { FaTrashCan } from "react-icons/fa6";
+import { FaCircleCheck } from "react-icons/fa6";
+import { FaCircleXmark } from "react-icons/fa6";
 
 class ModalDelete extends React.Component {
   constructor(props) {
@@ -32,19 +34,21 @@ class ModalDelete extends React.Component {
     return (
       <div>
         <button onClick={this.openModal} className="profile-card__button button--orange">
-          Delete
+          <FaTrashCan /> Delete
         </button>
         {showModal && (
           <div className="modal">
             <div className="modal-content">
               <span className="close" onClick={this.closeModal}>&times;</span>
-              <p>Deseja excluir esse contato ?</p>
-              <button onClick={() => this.onDelete(this.id)} className="profile-card__button button--green">
-                Sim
-              </button>
-              <button onClick={this.handleDelete} className="profile-card__button button--orange">
-                Não
-              </button>
+              <p>Do you want to delete this contact?</p>
+              <div className="container-buttons-modal">
+                <button onClick={() => this.onDelete(this.id)} className="profile-card__button button--green">
+                  <FaCircleCheck />Yes
+                </button>
+                <button onClick={this.handleDelete} className="profile-card__button button--orange">
+                <FaCircleXmark />  No
+                </button>
+              </div>
             </div>
           </div>
         )}

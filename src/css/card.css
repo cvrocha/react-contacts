@@ -23,18 +23,16 @@
     fill: currentColor;
 }
 .wrapper {
-    width: 100%;
-    width: 100%;
     height: 440px;
-    padding: 50px 20px;
-    padding-top: 100px;
+    padding: 10px 20px;
+    padding-top: 60px;
     display: flex;
     overflow: hidden;
 }
 @media screen and (max-width: 768px) {
     .wrapper {
         height: auto;
-        min-height: 100vh;
+        min-height: 50vh;
         padding-top: 100px;
     }
 }
@@ -136,11 +134,19 @@
     justify-content: center;
     align-items: center;
     margin-top: 40px;
-    gap: 35px;
+    gap: 15px;
 }
 @media screen and (max-width: 576px) {
     .profile-card-ctr {
         flex-wrap: wrap;
+        gap: 0px;
+        flex-direction: column;
+    }
+    .profile-card__txt {
+        text-align: start;
+        display: flex;
+        flex-wrap: wrap;
+        overflow: visible;
     }
 }
 /* Buttons */
@@ -159,6 +165,10 @@
     cursor: pointer;
     backface-visibility: hidden;
     transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 @media screen and (max-width: 768px) {
     .profile-card__button {
@@ -186,6 +196,7 @@
 }
 .profile-card__button:first-child {
     margin-left: 0;
+    margin-right: 0;
 }
 .profile-card__button:last-child {
     margin-right: 0;

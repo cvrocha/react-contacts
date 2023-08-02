@@ -1,31 +1,27 @@
 const List = [
     {
         id: 1,
-        image: "https://images.unsplash.com/photo-1645697272816-399d4eef3c45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+        image: "https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=600",
         name: "Bruna Rosângela Isadora Carvalho",
         phone: "+55 (81) 2948-7538",
-        email: 'bruna_carvalho@beminvestir.com.br'
+        email: 'bruna_carvalho@beminvestir.com.br',
+        about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the'
     },
     {
         id: 2,
-        image: "https://images.unsplash.com/photo-1640622304326-db5e15903ab4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxNnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+        image: "https://images.pexels.com/photos/7533347/pexels-photo-7533347.jpeg?auto=compress&cs=tinysrgb&w=600",
         name: "Ryan Nathan Porto",
         phone: "+55 (79) 3841-0279",
-        email: 'ryan.nathan.porto@danielstrauch.com'
+        email: 'ryan.nathan.porto@danielstrauch.com',
+        about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the'
     },
 {
         id: 3,
-        image: "https://images.unsplash.com/photo-1645389776061-01e3b6414546?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60",
+        image: "https://images.pexels.com/photos/3628700/pexels-photo-3628700.jpeg?auto=compress&cs=tinysrgb&w=600",
         name: "Caleb Paulo Almada",
         phone: "+55 (67) 2533-6779",
-        email: 'caleb.paulo.almada@hotmaill.com'
-    },
-    {
-        id: 4,
-        image: "https://images.unsplash.com/photo-1597091595753-3fff7ff7c349?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwaW4lMjBuZWVkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-        name: "Pedro Henrique Kevin Duarte",
-        phone: "+55 (51) 3597-7357",
-        email: 'pedro.henrique.duarte@absoluta.med.br'
+        email: 'caleb.paulo.almada@hotmaill.com',
+        about: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the'
     }
 ];
 

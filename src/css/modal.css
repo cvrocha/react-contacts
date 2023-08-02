@@ -16,20 +16,39 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    max-width: 400px;
+    max-width: 500px;
+    width: 100%;
     position: absolute;
 }
 .modal-content p{
     font-size: 18px;
     font-weight: 500;
     color: var(--text-color);
-    margin-bottom: 15px;
+    margin: 15px 0;
+}
+.container-buttons-modal{
+    display: flex;
+    padding: 0 4rem;
+    justify-content: center;
+    align-items: center;
 }
 .close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: -8px;
+    right: 6px;
     cursor: pointer;
-    font-size: 24px;
+    font-size: 40px;
     font-weight: bold;
+}
+@media screen and (max-width: 575px){
+    .modal-content {
+        overflow: hidden;
+        width: 80%;
+    }
+    .container-buttons-modal{
+        flex-direction: column;
+    }
+    .container-buttons-modal button{
+        margin: 0;
+    }
 }

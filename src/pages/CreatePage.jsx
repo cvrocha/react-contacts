@@ -1,32 +1,59 @@
-import React from 'react';
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FaHouseChimney } from "react-icons/fa6";
+import { FaCirclePlus } from "react-icons/fa6";
+import '../css/form.css';
+import List from "../model/list";
 
-const HomePage = () => {
-  return (
-    <div className="container">
-        <h1 className="title-header">Create Contacts</h1>
-        <Link to="/"><button class="profile-card__button button--blue-dark">Home</button></Link>
-        <form className="form-contato">
-          <div className="flex-input">
-            <label for="nome" className="profile-card__txt"><strong>Nome</strong></label>
-            <input type="text" id="nome" name="nome" placeholder="Seu nome"/>
-          </div>
-          <div className="flex-input">
-            <label for="telefone" className="profile-card__txt"><strong>Telefone</strong></label>
-            <input type="text" id="telefone" name="telefone" placeholder="(21) 9999-9999"/>
-          </div>
-          <div className="flex-input col-2">
-            <label for="email" className="profile-card__txt"><strong>Email</strong></label>
-            <input type="email" id="email" name="email" placeholder="contato@email.com"/>
-          </div>
-          <div className="flex-input col-2">
-            <label for="mensagem" className="profile-card__txt"><strong>Mensagem</strong></label>
-            <textarea rows="5" id="mensagem" name="mensagem" placeholder="O que você precisa?"></textarea>
-          </div>
-          <button className="profile-card__button button--green"> Send </button>
-        </form>
-    </div>
-  );
-};
+function Create() {
+    const [data, setData] = useState({})
+    const [pushForm, setPushForm] = useState({})
 
-export default HomePage;
+    const updateData = e => {
+        setData({
+            ...data,
+            [e.target.name]: e.target.value
+        })
+    }
+    const submit = e => {
+        e.preventDefault()
+        List.push(data)
+        console.log(List)
+    }
+    React.useEffect(() => {
+        const item = localStorage.setItem("create", JSON.stringify(data))
+        setPushForm(item)
+    },[data])
+    
+    return (
+        <div className="container">
+            <h1 className="title-header">Create Contacts</h1>
+            <Link to="/"><button class="profile-card__button button--blue-dark"><FaHouseChimney/>Home</button></Link>
+            <form onSubmit={submit} className="form-contato">
+                <div className="input_fields flex-input col-2">
+                    <label htmlFor="image">Image</label>
+                    <input id="image" name="image" type="file" accept="image/*"></input>
+                </div>
+                <div className="flex-input">
+                    <label for="name" className="profile-card__txt"><strong>Name</strong></label>
+                    <input onChange={updateData} type="text" id="name" name="name" minLength="5" required/>
+                </div>
+                <div className="flex-input">
+                    <label for="phone" className="profile-card__txt"><strong>Phone</strong></label>
+                    <input onChange={updateData} type="tel" id="phone" name="phone" minLength="9" required/>
+                </div>
+                <div className="flex-input col-2">
+                    <label for="email" className="profile-card__txt"><strong>Email</strong></label>
+                    <input onChange={updateData} type="text" id="email" name="email"/>
+                </div>
+                <div className="flex-input col-2">
+                    <label for="about" className="profile-card__txt"><strong>About</strong></label>
+                    <textarea onChange={updateData} rows="10" id="about" name="about"></textarea>
+                </div>
+                <button className="profile-card__button button--green" type="submit"><FaCirclePlus /> Create </button>
+            </form>
+        </div>
+    );
+}
+
+export default Create

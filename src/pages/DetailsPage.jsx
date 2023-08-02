@@ -1,25 +1,34 @@
 import React from 'react';
 import { Link, useParams } from "react-router-dom";
-import List from '/var/www/html/projetos/react-contacts/web/src/model/list';
-import DetailsContacts from '/var/www/html/projetos/react-contacts/web/src/components/details-contacts'
+import List from '../../src/model/list';
+import DetailsContacts from '../../src/components/detailsContacts'
+import { FaHouseChimney } from "react-icons/fa6";
 
 const DetailsPage = () => {
-  const {id} = useParams()
-  const contacts = List.find((contact) => contact.id === parseInt(id))
-  console.log(contacts)
+  const [ data, setData] = React.useState('create')
+  
+  const handleDelete = (id) => {
+    setData(data.filter(item => id !== item.id))
+  }
+
+  React.useEffect(() => {
+    const item = JSON.parse(localStorage.getItem("create"))
+    setData(item)
+  },[]) 
+  
+  
   return (
     <div className="container">
         <h1 className="title-header">Details Contacts</h1>
-        <Link to="/"><button class="profile-card__button button--blue-dark">Home</button></Link>
-        <div className="container">
-            <DetailsContacts
-              id={contacts.id}
-              name={contacts.name} 
-              phone={contacts.phone} 
-              email={contacts.email} 
-              image={contacts.image}
-            />
-        </div>
+        <Link to="/"><button class="profile-card__button button--blue-dark"><FaHouseChimney/>Home</button></Link>
+        <DetailsContacts
+          id={data.id} 
+          image={data.image} 
+          name={data.name} 
+          email={data.email} 
+          phone={data.phone} 
+          about={data.about} 
+        />
     </div>
   );
 };
